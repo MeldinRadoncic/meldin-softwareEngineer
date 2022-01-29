@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+
+body {
+  width: 100vw;
+  max-height: 100%:
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: black;
+}
+.main-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+::selection {
+    background-color: red;
+}
+
+/*Here starts Navbar*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    margin-top:1rem ;
+    font-size: 1.5rem;
+    font-family: 'Kanit',sans-serif;
+font-weight: bold;
+}
+
+a:hover {
+    color: white;
+    border-top:2px solid red;
+}
+
+
+.email-button {
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: email-button .3s ease infinite alternate;
+}
+
+/* Hello introduction */
+
+.hello {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%) ;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kanit',sans-serif;
+
+}
+
+.intro-heading {
+    position: absolute;
+
+}
+
+#h,#e,#l,#ll,#o {
+    color: white;
+}
+
+.welcome {
+    color: white;
+   display: flex;
+   opacity: .3;
+   justify-content: center;
+   font-size:3rem ;
+   font-family: 'Kanit',sans-serif;
+opacity: 0;
+z-index: 99998888888888888888;
+}
+
+/* info div centered div with photo */
+
+#info-div {
+    width: 80%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform:translate(-50%,-50%) ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1rem 1rem 1rem rgba(255, 0,0, 0.3);
+    border-radius: 20px;
+    background:black ;
+    opacity: 0;
+
+}
+
+.name-job-div {
+    width: 60%;
+    color: white;
+    font-family: 'Kanit',sans-serif;
+}
+
+.my-name {
+  font-size:3rem;
+  margin-bottom: -1.8rem;
+  margin-left: 20px;
+  text-shadow:7rem 1rem 5rem white ;
+   font-family:'Dancing Script',sans-serif;
+}
+
+.software-engineer-p {
+    margin-top:25px ;
+   padding-left: 4rem;
+   line-height: 12px;
+   font-size: 1rem;
+    color:red;
+    font-weight: 800;
+}
+
+.photo-div {
+    width: 40%;
+}
+
+.meldin-photo {
+    width: 70%;
+
+}
+
+/* date */
+
+.date-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kanit',sans-serif;
+position: absolute;
+bottom: 8%;
+}
+
+.date {
+    color:white;
+    font-size: 1.5rem;
+    position: absolute;
+    opacity: .3;
+font-family: 'Kanit',sans-serif;
+}
+
+/* About link */
+
+.open-about {
+    position: absolute;
+    top:6%;
+    left:4rem;
+    font-family: 'Kanit',sans-serif;
+    background-color: white;
+    color:black;
+border-radius: 10px;
+border:2px solid red;
+overflow: hidden;
+display: none;
+box-shadow:1rem 1rem 1rem rgba(255,255,255,0.2);
+}
+
+.aboutme-bio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.about-heading {
+    font-size: 2rem;
+padding-top: 7rem;
+}
+
+.p-about {
+   font-size: 20px;
+}
+
+.p-about::selection, .about-heading::selection {
+    background: black;
+    color:white;
+}
+
+
+
+/* Animation on email button */
+
+@keyframes email-button {
+    0%{
+        transform:rotate(15deg)
+    }
+    100%{
+        transform: rotate(-15deg);
+    }
+}
+
+
+
+/* Little corection on my name and job title */
+@media (min-width:1500px) {
+    .my-name {
+        font-size: 5rem;
+    }
+    .software-engineer-p {
+        font-size: 1.8rem;
+    }
+}
+
+ /* removing welcome word from landscape */
+
+@media (orientation:landscape) {
+    .welcome {
+        display:none;
+    }
+}
+
+
+/* phone sizes */
+@media (max-width:600px) {
+  body {
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+    a {
+        font-size: 18px;
+
+    }
+
+    .my-name {
+      text-shadow:1.5rem 1rem 2rem white ;
+    }
+
+    .open-about {
+min-width: 80%;
+position: relative;
+    }
+
+    .about-heading {
+        font-size: 20px;
+padding: 15px;
+    }
+
+    .p-about {
+        font-size: 18px;
+        padding:5px ;
+    }
+
+}
