@@ -9,6 +9,7 @@ body {
   background: black;
 }
 
+
 .main-container {
   width: 100%;
   height: 100%;
@@ -37,9 +38,8 @@ a {
   font-weight: bold;
 }
 
-a:hover {
-  color: white;
-  border-top: 2px solid red;
+.aboutBtn {
+  color:white;
 }
 
 .email-button {
@@ -155,9 +155,10 @@ a:hover {
   color: black;
   border-radius: 10px;
   border: 2px solid red;
-  overflow: hidden;
+   overflow: hidden;
   display: none;
   box-shadow: 1rem 1rem 1rem rgba(255, 255, 255, 0.2);
+    margin-top:2rem
 }
 
 .aboutme-bio {
@@ -166,11 +167,12 @@ a:hover {
   flex-direction: column;
   margin: 0 auto;
   width: 80%;
+
 }
 
 .about-heading {
   font-size: 2rem;
-  padding-top: 7rem;
+  padding-top: 4rem;
 }
 
 .p-about {
@@ -180,6 +182,12 @@ a:hover {
 .p-about::selection, .about-heading::selection {
   background: black;
   color: white;
+}
+
+iframe {
+  max-width: 50%;
+  height: 250px;
+  margin:4rem 20px;
 }
 
 /* Animation on email button */
@@ -211,9 +219,16 @@ a:hover {
   }
 }
 
+
 @media (orientation:landscape) and (max-width:1200px) {
   .meldin-photo {
     width: 40%;
+  }
+  iframe {
+    min-width: 300px;
+    min-height: 300px;
+    position: relative;
+    left: -2rem;
   }
 }
 
@@ -247,5 +262,18 @@ a:hover {
   .p-about {
     font-size: 18px;
     padding: 5px;
+  }
+
+  .download-here {
+    text-decoration: underline;
+    font-family:cursive;
+  }
+
+  iframe {
+    min-width: 290px;
+    min-height: 288px;
+    position: relative;
+    left: -2rem;
+
   }
 }

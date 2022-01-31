@@ -124,14 +124,16 @@ aboutBtn.addEventListener('click', (e) => {
     e.stopImmediatePropagation();
     return false;
   }
-  toggleTween(tll);
+    toggleTween(tll);
 
 })
 
 // function cheking if about btn is pressed to open if yes then reverse if no then play
 function toggleTween(tween) {
   tween.reversed() ? tween.play() : tween.reverse();
+
 }
+
 
 
 
