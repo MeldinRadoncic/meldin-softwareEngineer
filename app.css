@@ -11,8 +11,7 @@ body {
 
 .main-container {
   width: 100%;
-  height: 100%;
-  background-color: white;
+  background-color: red;
   z-index: 1;
 }
 
@@ -26,7 +25,18 @@ nav {
   display: flex;
   justify-content: space-around;
   opacity: 0;
+
 }
+
+.about-btn {
+  color: red;
+  border:none;
+  background: Transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
 
 a {
   text-decoration: none;
@@ -37,12 +47,10 @@ a {
   font-weight: bold;
 }
 
-.aboutBtn {
-  color: white;
-}
+
 
 .email-button {
-  width: 45px;
+  width: 35px;
   border-radius: 50%;
   border: 1px solid black;
   animation: email-button .3s ease infinite alternate;
@@ -50,18 +58,16 @@ a {
 
 /* Hello introduction */
 .hello {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-family: 'Kanit', sans-serif;
+margin: 0 auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Kanit', sans-serif;
 }
 
 .intro-heading {
-  position: absolute;
+  margin: 0 auto;
 }
 
 #h, #e, #l, #ll, #o {
@@ -81,7 +87,7 @@ a {
 
 /* info div centered div with photo */
 #info-div {
-  width: 80%;
+  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -93,26 +99,30 @@ a {
   border-radius: 20px;
   background: black;
   opacity: 0;
+  margin: 0 auto;
+
 }
 
 .name-job-div {
   width: 60%;
   color: white;
   font-family: 'Kanit', sans-serif;
+
+
 }
 
 .my-name {
-  font-size: 3rem;
   margin-bottom: -1.8rem;
   margin-left: 20px;
   text-shadow: 7rem 1rem 5rem white;
   font-family: 'Dancing Script', sans-serif;
+font-size: 3rem;
 }
 
 .software-engineer-p {
   margin-top: 25px;
   padding-left: 4rem;
-  line-height: 12px;
+  line-height: 20px;
   font-size: 1rem;
   color: red;
   font-weight: 800;
@@ -123,11 +133,11 @@ a {
 }
 
 .meldin-photo {
-  width: 70%;
+  width: 40%;
 }
 
 /* date */
-.date-div {
+/* .date-div {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -142,7 +152,7 @@ a {
   position: absolute;
   opacity: .3;
   font-family: 'Kanit', sans-serif;
-}
+} */
 
 /* About link */
 .open-about {
@@ -183,9 +193,11 @@ a {
 }
 
 iframe {
-  max-width: 50%;
-  height: 250px;
-  margin: 4rem 20px;
+  width: 375px;
+  height: 288px;
+  display: relative;
+  margin: 0 auto;
+  padding-bottom:2rem;
 }
 
 /* Animation on email button */
@@ -217,31 +229,39 @@ iframe {
   }
 }
 
+@media (max-width:1800px) {
+iframe{
+  display: none;
+}
+}
+
 @media (orientation:landscape) and (max-width:1200px) {
   .meldin-photo {
     width: 40%;
   }
 
   iframe {
-    min-width: 300px;
-    min-height: 300px;
-    position: relative;
-    left: -2rem;
+  display: none;
   }
 }
 
 /* phone sizes */
 @media (max-width:600px) {
   body {
-    width: 100vw;
-    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
   }
 
-  a {
+  a, .about-btn {
     font-size: 18px;
   }
+
+  .about-btn {
+    font-size: 19px;
+
+  }
+
 
   .my-name {
     text-shadow: 1.5rem 1rem 2rem white;
@@ -265,11 +285,8 @@ iframe {
   .download-here {
     text-decoration: underline;
   }
+iframe {
+  display: none;
+}
 
-  iframe {
-    min-width: 290px;
-    min-height: 288px;
-    position: relative;
-    left: -2rem;
-  }
 }

@@ -4,17 +4,17 @@ const aboutBtn = document.getElementById('popup')
 let date = document.getElementById('date');
 
 // Setting up the date
-let today = new Date();
-var options = {
-  weekday: "long",
-  day: "numeric",
-  month: "long",
-  hour: "numeric",
-  minute: "numeric"
-};
+// let today = new Date();
+// var options = {
+//   weekday: "long",
+//   day: "numeric",
+//   month: "long",
+//   hour: "numeric",
+//   minute: "numeric"
+// };
 
-let day = today.toLocaleString("us-en", options);
-date.innerText = day;
+// let day = today.toLocaleString("us-en", options);
+// date.innerText = day;
 
 // From here Magic starts
 const tl = new TimelineLite();
@@ -24,28 +24,28 @@ const tll = new TimelineLite({
 });
 
 tl.delay(1).to('#h', 1, {
-    fontSize: "35rem",
+    fontSize: "25rem",
     opacity: .5,
     display: 'none'
   })
 
   .to('#e', 1, {
-    fontSize: "35rem",
+    fontSize: "25rem",
     opacity: .5,
     display: 'none'
   })
   .to('#l', 1, {
-    fontSize: '35rem',
+    fontSize: '25rem',
     opacity: .5,
     display: 'none'
   })
   .to('#ll', 1, {
-    fontSize: "35rem",
+    fontSize: "25rem",
     opacity: .5,
     display: 'none'
   })
   .to('#o', 1, {
-    fontSize: "35rem",
+    fontSize: "25rem",
     opacity: .5,
     display: 'none'
   })
@@ -56,12 +56,16 @@ tl.delay(1).to('#h', 1, {
 
   .fromTo('.main-container', 2, {
     backgroundColor: 'white',
-    width: '0%'
+    width: '0%',
+    display:'none'
   }, {
-    opacity: 1,
+       display:'block',
     width: '100%',
     backgroundColor: 'black',
-    ease: Power2.easeOut
+    ease: Power2.easeOut,
+    position:'absoulute',
+    top:'0',
+    left:'0'
   })
   .fromTo('nav', 1, {
     opacity: 0,
@@ -89,7 +93,7 @@ tl.delay(1).to('#h', 1, {
 
 
 // here starts magic when about button is pressed
-tll.fromTo('#open-about', 0.5, {
+tll.fromTo('#open-about', 0.2, {
     top: '0%',
     left: '0',
     display: 'none',
@@ -108,13 +112,13 @@ tll.fromTo('#open-about', 0.5, {
     top: '50%',
     left: '50%',
     transform: "translate(20%,-50%)",
-    width: '30%',
+    width: '12%',
     onComplete: function() {
       aboutBtn.style.pointerElements = 'auto'
 
     }
 
-  }, '-=0.5')
+  }, '-=.5')
 
 
 // preventing a muliple pressing on about button while animation is active
