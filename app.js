@@ -1,4 +1,6 @@
 const aboutBtn = document.getElementById('popup')
+const exitAboutBtn = document.getElementById('exit-aboutBtn')
+
 
 // making date
 let date = document.getElementById('date');
@@ -97,20 +99,26 @@ tll.fromTo('#open-about', 0.2, {
     top: '0%',
     left: '0',
     display: 'none',
-    x: '-100'
+    x: '-50'
   }, {
     opacity: '1',
-    width: '50%',
+    // width: '50%',
     marginTop: '6%',
     left: '1rem',
     display: 'flex',
-    ease: Power1.easeOut,
+    ease: Power3.easeOut,
     x: '0'
-  }, '-=0.5')
-  .to('#info-div', 1, {
+  }, '-=0.02')
+  .to('.my-name',.2, {
+    fontSize:'1rem'
+  })
+  .to('.software-engineer-p',.2, {
+    paddingLeft:'0'
+  })
+  .to('#info-div', .2, {
     position: 'absolute',
     top: '50%',
-    left: '50%',
+    right: '5%',
     transform: "translate(20%,-50%)",
     width: '12%',
     onComplete: function() {
@@ -118,7 +126,7 @@ tll.fromTo('#open-about', 0.2, {
 
     }
 
-  }, '-=.5')
+  }, '-=.1')
 
 
 // preventing a muliple pressing on about button while animation is active
@@ -129,6 +137,16 @@ aboutBtn.addEventListener('click', (e) => {
     return false;
   }
     toggleTween(tll);
+
+})
+
+exitAboutBtn.addEventListener('click', (e) => {
+  if (tll.isActive()) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    return false;
+  }
+  toggleTween(tll);
 
 })
 

@@ -11,7 +11,7 @@ body {
 
 .main-container {
   width: 100%;
-  background-color: red;
+  background-color: black;
   z-index: 1;
 }
 
@@ -33,7 +33,9 @@ nav {
   border:none;
   background: Transparent;
   font-size: 1.5rem;
+  margin-top: .5rem;
   cursor: pointer;
+  font-weight: 500;
 }
 
 
@@ -158,6 +160,7 @@ font-size: 3rem;
 .open-about {
   position: absolute;
   top: 6%;
+  width: 80%;
   left: 4rem;
   font-family: 'Kanit', sans-serif;
   background-color: white;
@@ -167,15 +170,33 @@ font-size: 3rem;
   overflow: hidden;
   display: none;
   box-shadow: 1rem 1rem 1rem rgba(255, 255, 255, 0.2);
-  margin-top: 2rem
+  margin-top: 2rem;
 }
+
+.exit-aboutBtn {
+  border:none;
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.exit-aboutBtn:hover {
+  background: red;
+  color:white;
+  border-right: 5px;
+}
+
 
 .aboutme-bio {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  width: 80%;
+  width: 60%;
 }
 
 .about-heading {
@@ -238,6 +259,10 @@ iframe{
 @media (orientation:landscape) and (max-width:1200px) {
   .meldin-photo {
     width: 40%;
+  }
+
+  .about-bio {
+    width: 80%;
   }
 
   iframe {
